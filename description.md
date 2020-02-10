@@ -9,7 +9,9 @@ next_permutation을 이용해 조합(Combinataion) 구하기
 
 * * *
 
-'''
+<pre>
+<code>
+
 #include <stdio.h>
 #include <vector>
 #include <algorithm>
@@ -51,4 +53,6 @@ int main (){
 	
 	
 }
-'''
+
+</code>
+</pre>
