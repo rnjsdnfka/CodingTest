@@ -1,0 +1,43 @@
+#include <string>
+#include <vector>
+#include <queue>
+#include <iostream>
+using namespace std;
+
+class Node{
+    
+    public:
+    int idx, pri;
+    Node(int _idx, int _pri){
+        idx = _idx;
+        pri = _pri;
+    }
+};
+
+class mycom{
+    public:
+    bool operator() (const Node& a, const Node& b) const{
+        if ( a.pri == b.pri){
+            
+        }
+        return a.pri < b.pri; // 내림 차순!
+    }
+};
+
+int solution(vector<int> priorities, int location) {
+    int answer = 0;
+    priority_queue<Node , vector<Node>,mycom> pq;
+    for(int i = 0; i <priorities.size();i++){
+    
+        pq.push(*(new Node(i,priorities[i])));
+    }
+    
+    for(int i = 0; i <priorities.size();i++){
+        cout << pq.top().idx << '\n';
+        pq.pop();
+    }
+    
+
+    
+    return answer;
+}
