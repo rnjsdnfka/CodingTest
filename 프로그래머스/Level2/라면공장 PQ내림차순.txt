@@ -1,0 +1,32 @@
+#include <string>
+#include <vector>
+#include <queue>
+#include <iostream>
+using namespace std;
+/*
+class Compare{
+public:
+    bool operator() (int lhs, int rhs){
+        return lhs > rhs;
+    }
+};
+*/
+
+
+int solution(int stock, vector<int> dates, vector<int> supplies, int k) {
+    int answer = 0;
+    priority_queue<int, vector<int>,Compare> q;
+    
+    for(int i = 0; i < dates.size();i++){
+        q.push(dates[i]);
+     
+    
+    }
+     for(int i = 0; i < dates.size();i++){
+        cout << q.top() << '\n';
+        q.pop();
+    }
+    
+    
+    return answer;
+}
