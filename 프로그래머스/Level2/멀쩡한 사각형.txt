@@ -1,0 +1,16 @@
+using namespace std;
+long long solution(int w,int h)
+{
+	long long answer = 0;
+
+    for(long i = 0; i < w; i++){
+        long x = h;
+        x *= i;
+        x /= w;
+    
+        answer += x;
+    }
+    
+    
+	return answer * 2;
+}
